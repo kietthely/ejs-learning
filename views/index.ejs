@@ -7,8 +7,18 @@
   </head>
 
   <body>
-    <h1>Welcome to EJS Learning</h1>
-    <%# this is a comment from EJS %>
-    <p>hey, it's <%= dayType %>, <%= advice %></p>
+    <h1>Welcome to <%= title %></h1>
+
+    <p>It's a <%= dayType %>!</p>
+    <% if(seconds% 2 === 0) { %>
+    <p>Even seconds. Here are some options:</p>
+    <% for (let i = 0; i < coin.length; i++) { %>
+
+    <li><%= coin[i] %></li>
+    <% } %> <% } else { %>
+
+    <p>Odd seconds. No options available</p>
+
+    <% } %> <%- htmlContent %>
   </body>
 </html>
