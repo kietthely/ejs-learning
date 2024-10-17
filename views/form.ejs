@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EJS Form</title>
+  </head>
+
+  <body>
+    <h1>Welcome to <%= title %></h1>
+
+    <% if(locals.nameSize) { %>
+    <p>
+      There are <%= nameSize %> characters in your name and <%= emailSize %>
+      characters in your email
+    </p>
+    <% } %>
+
+    <form action="/learning/form/submit" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
